@@ -1,0 +1,25 @@
+overwrite: true
+schema: "http://58.144.142.162:4000"
+documents: "src/**/*.graphql"
+generates:
+  src/graphql/index.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-vue-urql
+    config:
+      withComposition: true
+      urqlImportFrom: '@/vue-urql'
+      skipTypename: true
+      onlyOperationTypes: true
+      disableDescriptions: true # 去掉注释描述
+ 
+      avoidOptionals: false
+      # avoidOptionals: 
+      #   field: true
+      #   inputValue: false
+      #   object: true
+      #   defaultValue: false
+  ./graphql.schema.json:
+    plugins:
+      - introspection

@@ -1,0 +1,55 @@
+.xn-widget {
+  position: relative;
+  z-index: 10000;
+}
+
+.xn-widget-inner {
+  position: relative;
+  z-index: 1;
+  .widget-help {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.xn-help-support {
+  position: absolute;
+  cursor: move;
+  box-sizing: border-box;
+  padding: 3px;
+  right: 3px;
+  bottom: 280px;
+  z-index: 99;
+
+  .help-btn_inner{
+    cursor: pointer;
+    border-radius: 28px;
+    box-sizing: border-box;
+    padding: 15px 0;
+    width: 40px;
+    text-align: center;
+    font-size: 0;
+    background-color: #006eff;
+    box-shadow: 0 46px 49px -2px rgba(19,41,75,.15),0 14px 15px -2px rgba(19,41,75,.14),0 6px 6px -2px rgba(19,41,75,.14),0 2px 2px -2px rgba(19,41,75,.13);
+  }
+
+  .help-btn_icon{
+    display: block;
+    margin: 0 auto 4px;
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMCAwaDIwdjIwSDB6Ii8+PHBhdGggZD0iTTEwIDBhOCA4IDAgMDE3Ljk5NiA3Ljc1TDE4IDhoMnY3aC0ydjFhNCA0IDAgMDEtMy44IDMuOTk1TDE0IDIwaC00di0yaDRhMiAyIDAgMDAxLjk5NS0xLjg1TDE2IDE2VjhhNiA2IDAgMDAtMTEuOTk2LS4yMjVMNCA4djdIMFY4aDJhOCA4IDAgMDE4LTh6TTggMTFhMiAyIDAgMDAzLjk5NS4xNUwxMiAxMWgyYTQgNCAwIDAxLTcuOTk1LjJMNiAxMWgyeiIgZmlsbD0iI0ZGRiIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9nPjwvc3ZnPg==)
+  }
+
+  .help-btn_text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    width: 20px;
+    margin: 0 auto;
+    color: #fff;
+  }
+}

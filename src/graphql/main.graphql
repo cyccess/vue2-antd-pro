@@ -1,0 +1,112 @@
+# query SysMenuConnection($page: Int, $size: Int) {
+#   SysMenuConnection(page: $page, size: $size) {
+#     edges {
+#       node {
+#         name
+#         id
+#         title
+#       }
+#     }
+#     pageInfo {
+#       total
+#     }
+#   }
+# }
+
+# query SysMenu($id: Long!) {
+#   SysMenu(id: $id) {
+#     id
+#     appId
+#     name
+#     title
+#     permission
+#   }
+# }
+
+query BaseStaff($id: Long!) {
+  BaseStaff(id: $id) {
+    id
+    phone
+  }
+}
+# 待办
+query MyTodoForBpmnTasksConnection($page: Int, $size: Int, $sort: String) {
+  MyTodoForBpmnTasksConnection(page: $page, size: $size, sort: $sort) {
+    edges {
+      node {
+        id
+        name
+        taskTimeConsuming
+        formUrl
+        taskCode
+        lastHandOver {
+          fromUserName
+        }
+        instance {
+          id
+          title
+          name
+          lastUserTaskCompleteTime
+          createdDate
+          ownerName
+          formUrl
+          userTasks
+          favorite {
+            id
+          }
+        }
+      }
+    }
+    pageInfo {
+      total
+    }
+  }
+}
+
+# 通知提醒
+query MessageConnection($current: Int, $size: Int, $groupId: Int, $status: Int) {
+  MessageConnection(current: $current, size: $size, groupId: $groupId, status: $status) {
+    edges {
+      node {
+        content
+        createTime
+        id
+        senderName
+        source
+        status
+        title
+        type
+      }
+    }
+    pageInfo {
+      total
+    }
+  }
+}
+
+# 我的关注
+query MyFocusForBpmnTasksConnection($page: Int, $size: Int, $sort: String) {
+  MyFocusForBpmnTasksConnection(page: $page, size: $size, sort: $sort) {
+    edges {
+      node {
+        id
+        instance {
+          id
+          title
+          name
+          ownerName
+          createdDate
+          userTasks
+          candidateUsers
+          formUrl
+          favorite {
+            id
+          }
+        }
+      }
+    }
+    pageInfo {
+      total
+    }
+  }
+}
