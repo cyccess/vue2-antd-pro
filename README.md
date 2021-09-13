@@ -1,4 +1,8 @@
-# xndb-client-main
+# vue2-antd-pro
+
+vue2 + composition api + ts + keycloak + graphql + urql + graphql-codegen + antd + qiankun 
+
+vue2 基于 `composition api` 的开发矿框架
 
 ## Project setup
 ```
